@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignore test files
+__tests__/
+*.test.js
+*.test.jsx
+*.spec.js
+*.spec.jsx
+coverage/

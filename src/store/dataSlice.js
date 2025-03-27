@@ -13,7 +13,11 @@ const dataSlice = createSlice({
     loading: false,
     error: null,
   },
-  reducers: {},
+  reducers: {
+    setData: (state, action) => {
+      state.items = action.payload;
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchData.pending, (state) => {
@@ -25,9 +29,10 @@ const dataSlice = createSlice({
       })
       .addCase(fetchData.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error.message;
+        state.error = action.error?.message || "Something went wrong!";
       });
   },
 });
 
+export const { setData } = dataSlice.actions;
 export default dataSlice.reducer;

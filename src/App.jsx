@@ -4,7 +4,7 @@ import { fetchData } from './store/dataSlice';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Details from './pages/Details';
-import './App.css'
+import './app.scss'
 
 function App() {
   const dispatch = useDispatch();
@@ -13,10 +13,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Router>
-      <nav>
-        <Link to='/'>Home</Link>
-      </nav>
+    <Router>    
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/details/:id' element={<Details />} />

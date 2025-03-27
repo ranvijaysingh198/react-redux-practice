@@ -1,23 +1,26 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { items, loading, error } = useSelector((state) => state.data);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p className="text-center">Loading...</p>;
+  if (error) return <p className="text-center text-red">Error: {error}</p>;
 
   return (
-    <div>
+    <div className="home-container">
       <h1>Posts</h1>
-      <ul>
+      <div className="grid-container">
         {items.map((item) => (
-          <li key={item.id}>
-            <Link to={`/details/${item.id}`}>{item.title}</Link>
-          </li>
+          <div key={item.id} className="card">
+            <h2>{item.title}</h2>
+            <p>{item.body.slice(0, 100)}...</p>
+            <Link to={`/details/${item.id}`} className="read-more">
+              Read More →
+            </Link>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

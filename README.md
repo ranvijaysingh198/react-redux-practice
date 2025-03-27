@@ -1,4 +1,4 @@
-React Redux Practice
+# React Redux Practice
 
 This project is a React-based application that fetches and displays posts from an API with features like search, filtering, and pagination. It uses Redux Toolkit for state management and is optimized for performance.
 
@@ -17,13 +17,13 @@ Steps to Install and Run the Project
 Install Dependencies
 
 npm install
-# or
+OR
 yarn install
 
 Start the Development Server
 
 npm run dev
-# or
+OR
 yarn dev
 
 This will run the project on http://localhost:5173/ by default.
@@ -45,7 +45,7 @@ Running Tests
 To run tests, use:
 
 npm test
-# or
+OR
 yarn test
 
 Build for Production
@@ -53,7 +53,7 @@ Build for Production
 To create an optimized production build:
 
 npm run build
-# or
+OR
 yarn build
 
 Contributing

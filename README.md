@@ -14,11 +14,6 @@ npm or yarn
 
 Steps to Install and Run the Project
 
-Clone the Repository
-
-git clone <GITHUB_REPOSITORY_URL>
-cd <PROJECT_DIRECTORY>
-
 Install Dependencies
 
 npm install

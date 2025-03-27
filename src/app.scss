@@ -1,22 +1,5 @@
 @import "./main.scss";
 
-/* Navbar */
-.nav-bar {
-  background-color: $primary-color;
-  padding: 15px 0;
-  text-align: center;
-
-  a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: bold;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
 
 /* Home Page */
 .home-container {
@@ -59,6 +42,38 @@
       }
     }
   }
+
+  // search and filter
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  
+    input,
+    select {
+      padding: 10px;
+      border: 1px solid $light-gray;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  
+    input {
+      width: 300px;
+    }
+  
+    select {
+      width: 150px;
+    }
+  }
+  
+  /* Grid Layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
 }
 
 /* Details Page */
